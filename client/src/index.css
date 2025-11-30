@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply text-lg leading-relaxed;
+    font-family: 'Inter', 'Open Sans', 'Roboto', sans-serif;
+    color: #212529;
+    background-color: #FFFFFF;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+
+  /* Minimum font sizes per project scope */
+  body {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  /* Accessibility - Focus states */
+  a:focus, button:focus, input:focus, textarea:focus, select:focus {
+    @apply outline-2 outline-offset-2 outline-blue-600;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Accessibility - minimum tap target size */
+  button, a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}

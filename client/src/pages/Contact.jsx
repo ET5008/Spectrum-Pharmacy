@@ -1,5 +1,5 @@
 import { useState } from 'react';
-
+import { storeInfo } from '../data/storeInfo'
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -52,8 +52,8 @@ const Contact = () => {
                   </svg>
                   <div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">Phone</h3>
-                    <a href="tel:+1234567890" className="text-blue-600 text-lg hover:text-blue-800">
-                      (123) 456-7890
+                    <a href="" className="text-blue-600 text-lg hover:text-blue-800">
+                      {storeInfo.phone}
                     </a>
                     <p className="text-gray-600 mt-1">Call for prescriptions or questions</p>
                   </div>
@@ -68,8 +68,8 @@ const Contact = () => {
                   </svg>
                   <div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">Email</h3>
-                    <a href="mailto:info@spectrumpharmacy.com" className="text-blue-600 text-lg hover:text-blue-800">
-                      info@spectrumpharmacy.com
+                    <a href={`mailto:${storeInfo.email} `}className="text-blue-600 text-lg hover:text-blue-800">
+                      {storeInfo.email}
                     </a>
                     <p className="text-gray-600 mt-1">Send us a message anytime</p>
                   </div>
@@ -85,8 +85,7 @@ const Contact = () => {
                   </svg>
                   <div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">Location</h3>
-                    <p className="text-gray-700 text-lg">123 Main Street</p>
-                    <p className="text-gray-700 text-lg">Your City, ST 12345</p>
+                    <p className="text-gray-700 text-lg">{storeInfo.address}</p>
                     <a
                       href="https://maps.google.com"
                       target="_blank"
@@ -105,14 +104,11 @@ const Contact = () => {
                 <div className="space-y-2 text-gray-700">
                   <div className="flex justify-between">
                     <span>Monday - Friday:</span>
-                    <span className="font-semibold">9:00 AM - 7:00 PM</span>
+                    <span className="font-semibold">9:30 AM - 6:30 PM</span>
                   </div>
+
                   <div className="flex justify-between">
-                    <span>Saturday:</span>
-                    <span className="font-semibold">9:00 AM - 5:00 PM</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Sunday:</span>
+                    <span>Satueday - Sunday:</span>
                     <span className="font-semibold">Closed</span>
                   </div>
                 </div>

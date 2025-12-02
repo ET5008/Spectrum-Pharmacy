@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { storeInfo } from '../data/storeInfo';
 
 const Footer = () => {
   return (
@@ -6,22 +7,22 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-20 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Contact Information */}
-          <div>
+          <div className=''>
             <h3 className="text-xl font-bold mb-4">Contact Us</h3>
             <div className="space-y-2 text-gray-200">
               <p>
-                <a href="tel:+1234567890" className="hover:text-white transition-colors">
-                  Phone: (123) 456-7890
+                <a href={`tel:${storeInfo.phone}`} className="hover:text-white transition-colors">
+                  Phone: {storeInfo.phone}
                 </a>
               </p>
               <p>
-                <a href="fax:+1234567891" className="hover:text-white transition-colors">
-                  Fax: (123) 456-7891
+                <a href={`fax:${storeInfo.fax}`} className="hover:text-white transition-colors">
+                  Fax: {storeInfo.fax}
                 </a>
               </p>
-              <p>
-                <a href="mailto:info@spectrumpharmacy.com" className="hover:text-white transition-colors">
-                  Email: info@spectrumpharmacy.com
+              <p className='w-30'>
+                <a href={`mailto:${storeInfo.email}`} className="hover:text-white transition-colors">
+                  Email: {storeInfo.email}
                 </a>
               </p>
             </div>
@@ -31,10 +32,9 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">Location & Hours</h3>
             <div className="space-y-2 text-gray-200">
-              <p>123 Main Street</p>
-              <p>Your City, ST 12345</p>
+              <p>{storeInfo.address}</p>
               <a
-                href="https://maps.google.com"
+                href={storeInfo.addressLink || "https://maps.google.com"}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-green-400 hover:text-white transition-colors inline-block mt-2"
@@ -43,9 +43,7 @@ const Footer = () => {
               </a>
               <div className="mt-4">
                 <p className="font-semibold">Hours:</p>
-                <p>Mon-Fri: 9am - 7pm</p>
-                <p>Sat: 9am - 5pm</p>
-                <p>Sun: Closed</p>
+                <p>{storeInfo.hours}</p>
               </div>
             </div>
           </div>

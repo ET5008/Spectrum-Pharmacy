@@ -206,7 +206,19 @@ const Contact = () => {
         <div className="max-w-7xl mx-auto px-6 lg:px-20">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Find Us</h2>
           <div className="bg-gray-200 rounded-xl overflow-hidden h-96 flex items-center justify-center">
-            <p className="text-gray-600 text-lg">Google Maps Embed (To be added)</p>
+            <div style={{position: 'relative', textAlign: 'right', width: '100%', height: '400px'}}>
+              <div style={{overflow: 'hidden', background: 'none', width: '100%', height: '400px'}}>
+                <iframe
+                  style={{height: '400px'}}
+                  width="100%"
+                  frameBorder="0"
+                  scrolling="no"
+                  marginHeight="0"
+                  marginWidth="0"
+                  src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=9430 Warner Ave, Unit G Fountain Valley, CA 92708&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                ></iframe>
+              </div>
+            </div>
           </div>
         </div>
       </section>

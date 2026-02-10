@@ -70,7 +70,7 @@ const Home = () => {
                   'Fast prescription processing and refills',
                   'Free delivery with no minimum order',
                   'Comprehensive medication counseling',
-                  'Insurance accepted and processing',
+                  'Medicare, Medicaid/Medi-Cal & commercial insurance accepted',
                   'Easy online refill requests'
                 ].map((item, index) => (
                   <li key={index} className="flex items-start">

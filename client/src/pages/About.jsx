@@ -146,11 +146,11 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-lg">
             <div className="bg-blue-700 p-6 rounded-lg">
               <p className="font-semibold mb-2">Licensed Pharmacy</p>
-              <p className="text-blue-200">License #: [To be added]</p>
+              <p className="text-blue-200">License #: PHY59594</p>
             </div>
             <div className="bg-blue-700 p-6 rounded-lg">
               <p className="font-semibold mb-2">DEA Registration</p>
-              <p className="text-blue-200">DEA #: [To be added]</p>
+              <p className="text-blue-200">DEA #: FN6612813</p>
             </div>
             <div className="bg-blue-700 p-6 rounded-lg">
               <p className="font-semibold mb-2">Professional Member</p>
@@ -159,6 +159,49 @@ const About = () => {
             <div className="bg-blue-700 p-6 rounded-lg">
               <p className="font-semibold mb-2">Years in Service</p>
               <p className="text-blue-200">Since 2000</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Insurance & Affiliations */}
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="max-w-5xl mx-auto px-6 lg:px-20">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
+            Insurance & Affiliations
+          </h2>
+          <p className="text-xl text-gray-600 mb-10 text-center">
+            We work with a wide range of insurance providers to serve you better
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Medicare & Medicaid */}
+            <div className="bg-green-50 border border-green-200 rounded-xl p-8">
+              <div className="flex items-center mb-4">
+                <svg className="w-8 h-8 text-green-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                <h3 className="text-xl font-bold text-gray-900">Medicare & Medicaid / Medi-Cal</h3>
+              </div>
+              <p className="text-gray-700 leading-relaxed">
+                We accept and bill all Medicare and Medicaid (Medi-Cal) insurance plans. No specific contracts are required — we can process your prescriptions directly.
+              </p>
+            </div>
+
+            {/* Commercial Insurance */}
+            <div className="bg-blue-50 border border-blue-200 rounded-xl p-8">
+              <div className="flex items-center mb-4">
+                <svg className="w-8 h-8 text-blue-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+                </svg>
+                <h3 className="text-xl font-bold text-gray-900">Commercial Insurance</h3>
+              </div>
+              <p className="text-gray-700 leading-relaxed mb-3">
+                We accept commercial insurances including Cigna, Aetna, Blue Shield, Blue Cross, and more for regular retail medications.
+              </p>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                <strong>Please note:</strong> Specialty medications are restricted under most commercial plans. For specialty prescriptions, patients may need to use their insurance's preferred in-network pharmacy.
+              </p>
             </div>
           </div>
         </div>
